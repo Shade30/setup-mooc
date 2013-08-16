@@ -21,6 +21,10 @@ npm install -g jshint
 # See: http://nodejs.org/api/repl.html#repl_repl
 sudo apt-get install -y rlwrap
 
+# For sudo add-apt-repository
+sudo apt-get install -y python-software-properties
+sudo apt-get install -y software-properties-common
+
 # Install emacs24
 # https://launchpad.net/~cassou/+archive/emacs
 sudo add-apt-repository -y ppa:cassou/emacs
