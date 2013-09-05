@@ -1,0 +1,14 @@
+<VirtualHost *:80>
+    ServerName git.server
+    ServerAdmin webmaster@git.server
+    DocumentRoot /usr/share/gitweb
+
+    <Directory /usr/share/gitweb>
+        Options FollowSymLinks ExecCGI
+        AddHandler cgi-script cgi
+        RewriteEngine On
+        RewriteCond %{REQUEST_FILENAME} !-f
+        RewriteCond %{REQUEST_FILENAME} !-d
+        RewriteRule ^.* /index.cgi/$0 [L,PT]
+    </Directory>
+</VirtualHost>
